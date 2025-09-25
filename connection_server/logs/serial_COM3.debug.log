@@ -1,0 +1,1 @@
+2025-07-26 19:28:03.117 [ERROR] Failed to open COM3@115200: SerialException("could not open port 'COM3': OSError(22, '信号灯超时时间已到', None, 121)")

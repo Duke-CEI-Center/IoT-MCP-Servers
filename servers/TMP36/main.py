@@ -28,7 +28,7 @@ def read_temperature():
     temp_c = (voltage - 0.5) * 100       # TMP36: 10mV/°C with 500mV offset
     return temp_c
 
-def do_read(action):
+def temp36_read(action):
     """
     Supported actions: 'read_temp', 'read_all'
     """
@@ -61,90 +61,134 @@ def get_instruction(line):
         count = None
     return cmd, action, interval, count
 
+# helper method: connect to Wi-fi
 async def connect_to_wifi(ssid, password):
     sta = network.WLAN(network.STA_IF)
     if sta.isconnected():
         sta.disconnect()
+    sta.active(False)
+    await asyncio.sleep(1)
     sta.active(True)
     sta.connect(ssid, password)
-    timeout = 0
-    print("Connecting to Wi-Fi...")
+    print('[TCP] Connecting to network...')
     while not sta.isconnected():
         await asyncio.sleep(1)
-        timeout += 1
-        if timeout > 10:
-            sta.disconnect()
-            raise Exception("Wi-Fi connection timed out")
-    print("Connected, IP:", sta.ifconfig()[0])
+    print('[TCP] Allocated IP:', sta.ifconfig()[0])
 
+# helper method: for wi-fi connection, handle the read and write process
 async def handle_tcp(reader, writer):
     while True:
-        line = await reader.readline()
+        try:
+            line = await asyncio.wait_for(reader.readline(), timeout=1)
+        except asyncio.TimeoutError:
+            await asyncio.sleep(0)
+            continue
         if not line:
             await asyncio.sleep(0)
             continue
+        print("[TCP] Received line:", line)
         try:
             cmd, action, interval, count = get_instruction(line)
-            if action == "exit":
-                print("Exit command received; closing TCP handler.")
-                return
         except Exception as e:
             await writer.awrite(ujson.dumps({"error": f"bad json: {e}"}) + "\n")
-            continue
-
-        sent = 0
-        while True:
-            resp = do_read(action)
-            await writer.awrite(ujson.dumps(resp) + "\n")
-            sent += 1
-            if count is not None and sent >= count:
-                break
-            await asyncio.sleep(interval)
-
-async def tcp_worker():
-    while True:
-        try:
-            print(f"Connecting to {SERVER_IP}:{PORT}...")
-            reader, writer = await asyncio.open_connection(SERVER_IP, PORT)
-            print("TCP connected.")
-            await handle_tcp(reader, writer)
-            writer.close()
-            reader.close()
-            await asyncio.sleep(1)
-        except Exception as e:
-            print("TCP worker error:", e)
-            await asyncio.sleep(2)
-
-async def uart_worker():
-    while True:
-        line = uart.readline()
-        if not line:
+            await writer.drain()
             await asyncio.sleep(0)
             continue
-        try:
-            cmd, action, interval, count = get_instruction(line)
-            if action == "exit":
-                print("Exit command received; closing UART handler.")
-                return
-        except Exception as e:
-            uart.write(ujson.dumps({"error": f"bad json: {e}"}) + "\n")
-            await asyncio.sleep(1)
-            continue
 
-        sent = 0
+        if action == "exit":
+            print("[TCP] Exiting...")
+            return
+
+        i = 0
         while True:
-            resp = do_read(action)
-            uart.write(ujson.dumps(resp) + "\n")
-            sent += 1
-            if count is not None and sent >= count:
+            resp = temp36_read(action)
+            await writer.awrite(ujson.dumps(resp) + '\n')
+            await writer.drain()
+            i += 1
+            if count is not None and i >= count:
                 break
             await asyncio.sleep(interval)
 
+        print("---------------------------------------------------")
+        print(f"\t\t[TCP] DATA UPLOADED!")
+        print("---------------------------------------------------")
+
+# main method that connect to server via Wi-fi
+async def tcp_worker():
+    global SSID, PASSWORD, SERVER_IP, PORT
+    connected_to_wifi = False
+    while not connected_to_wifi:
+        try:
+            await asyncio.wait_for(connect_to_wifi(SSID, PASSWORD), timeout=10)
+            connected_to_wifi = True
+        except Exception as e:
+            print("[TCP] Failed to connect to SSID: %s" % e)
+            print("[TCP] Retrying...")
+    while True:
+        try:
+            # Run the Wi-Fi connection attempt
+            print("[TCP] Connecting to server IP: %s port: %s ..." % (SERVER_IP, PORT))
+            try:
+                reader, writer = await asyncio.open_connection(SERVER_IP, PORT)
+                await handle_tcp(reader, writer)
+            except OSError as e:
+                print("[TCP] Failed to connect to server: %s" % e)
+                await asyncio.sleep(0)
+                continue
+            print("[TCP] Disconnecting from server...")
+            reader.close()
+            writer.close()
+            await asyncio.sleep(0)
+        except Exception as e:
+            print("[TCP] Worker error:", e)
+            await asyncio.sleep(0)
+            continue
+
+# main method that connect to server via uart
+async def uart_worker():
+    while True:
+        try:
+            print('[Serial] UART connection open')
+            while True:
+                line = uart.readline()
+                if not line:
+                    await asyncio.sleep(0)
+                    continue
+                print("[Serial] Received line: %s" % line)
+                try:
+                    cmd, action, interval, count = get_instruction(line)
+                except Exception as e:
+                    uart.write(ujson.dumps({"error": f"bad json: {e}"}) + "\n")
+                    await asyncio.sleep(0)
+                    continue
+
+                if action == "exit":
+                    print("[Serial] Exiting...")
+                    return
+
+                i = 0
+                while True:
+                    resp = temp36_read(action)
+                    uart.write(ujson.dumps(resp) + "\n")
+                    i += 1
+                    if count is not None and i >= count:
+                        break
+                    await asyncio.sleep(interval)
+
+                print("---------------------------------------------------")
+                print(f"\t\t[Serial] DATA UPLOADED!")
+                print("---------------------------------------------------")
+
+        except Exception as e:
+            print("[Serial] Worker error:", e)
+            await asyncio.sleep(0)
+            continue
+
 async def main():
-    await connect_to_wifi(SSID, PASSWORD)
-    tcp_task = asyncio.create_task(tcp_worker())
-    uart_task = asyncio.create_task(uart_worker())
-    await asyncio.gather(tcp_task, uart_task)
+    tcp_worker_task = asyncio.create_task(tcp_worker())
+    uart_worker_task = asyncio.create_task(uart_worker())
+    await asyncio.gather(tcp_worker_task, uart_worker_task)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

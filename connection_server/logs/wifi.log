@@ -1,0 +1,10 @@
+[2025-07-26 19:27:50,208] INFO:WifiTransport: WifiTransport initialized
+[2025-07-26 19:28:15,933] INFO:WifiTransport: WifiTransport listening on 0.0.0.0:9000
+[2025-07-26 19:35:20,753] INFO:WifiTransport: Client connected: ('10.146.87.230', 53356), id=10_146_87_230
+[2025-07-26 20:45:52,219] INFO:WifiTransport: Client connected: ('10.146.87.230', 61088), id=10_146_87_230
+[2025-07-27 00:40:49,351] INFO:WifiTransport: Client connected: ('10.146.87.230', 61089), id=10_146_87_230
+[2025-07-27 01:36:45,249] INFO:WifiTransport: Replaced existing connection for IP 10.146.87.230
+[2025-07-27 01:36:45,249] INFO:WifiTransport: Client connected: ('10.146.87.230', 61090), id=10_146_87_230
+[2025-07-27 08:40:54,501] INFO:WifiTransport: Client connected: ('10.146.87.230', 61091), id=10_146_87_230
+[2025-07-27 09:36:50,762] INFO:WifiTransport: Replaced existing connection for IP 10.146.87.230
+[2025-07-27 09:36:50,762] INFO:WifiTransport: Client connected: ('10.146.87.230', 61092), id=10_146_87_230
