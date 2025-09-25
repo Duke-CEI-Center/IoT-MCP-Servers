@@ -1,0 +1,155 @@
+2025-07-26 19:27:50.208 [DEBUG] Loaded transport: serial
+2025-07-26 19:27:50.208 [DEBUG] Loaded transport: wifi
+2025-07-26 19:28:15.933 [INFO ] HTTP server running at http://localhost:8000
+2025-07-26 20:01:58.170 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:01:59.175 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:00.178 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:01.182 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DS18X20', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:02.194 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY026', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:03.198 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LM35', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:04.203 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY038', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:05.206 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY021', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:06.209 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY023', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:07.214 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY037', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:08.216 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY020', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:09.219 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY004', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:10.224 [WARNING] Bad command format or sensor unavailable: {'sensor': 'HC_SR04', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:11.226 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY010', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:12.230 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY036', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:13.234 [WARNING] Bad command format or sensor unavailable: {'sensor': 'SW420', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:14.243 [WARNING] Bad command format or sensor unavailable: {'sensor': 'GY302', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:15.245 [WARNING] Bad command format or sensor unavailable: {'sensor': 'WaterSensor', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:16.251 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY018', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:17.252 [WARNING] Bad command format or sensor unavailable: {'sensor': 'TTP223', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:18.256 [INFO ] Accept client request: {'sensor': 'HC_SR501', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:19.262 [INFO ] Accept client request: {'sensor': 'HW080', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:02:20.264 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LTR390', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:03.540 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:04.543 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:05.549 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:06.551 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DS18X20', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:07.556 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY026', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:08.558 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LM35', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:09.563 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY038', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:10.566 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY021', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:11.569 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY023', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:12.575 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY037', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:13.578 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY020', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:14.584 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY004', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:15.588 [WARNING] Bad command format or sensor unavailable: {'sensor': 'HC_SR04', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:16.591 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY010', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:17.594 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY036', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:18.598 [WARNING] Bad command format or sensor unavailable: {'sensor': 'SW420', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:19.600 [WARNING] Bad command format or sensor unavailable: {'sensor': 'GY302', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:20.606 [WARNING] Bad command format or sensor unavailable: {'sensor': 'WaterSensor', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:21.609 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY018', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:22.611 [WARNING] Bad command format or sensor unavailable: {'sensor': 'TTP223', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:23.615 [INFO ] Accept client request: {'sensor': 'HC_SR501', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:24.620 [INFO ] Accept client request: {'sensor': 'HW080', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:25.624 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LTR390', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:38.379 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:39.382 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:40.384 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:41.387 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DS18X20', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:42.393 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY026', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:43.394 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LM35', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:44.398 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY038', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:45.401 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY021', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:46.406 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY023', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:47.408 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY037', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:48.411 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY020', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:49.417 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY004', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:50.419 [WARNING] Bad command format or sensor unavailable: {'sensor': 'HC_SR04', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:51.422 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY010', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:52.427 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY036', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:53.429 [WARNING] Bad command format or sensor unavailable: {'sensor': 'SW420', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:54.432 [WARNING] Bad command format or sensor unavailable: {'sensor': 'GY302', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:55.435 [WARNING] Bad command format or sensor unavailable: {'sensor': 'WaterSensor', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:56.439 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY018', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:57.442 [WARNING] Bad command format or sensor unavailable: {'sensor': 'TTP223', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:58.447 [INFO ] Accept client request: {'sensor': 'HC_SR501', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:03:59.452 [INFO ] Accept client request: {'sensor': 'HW080', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:04:00.455 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LTR390', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:10.672 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:11.683 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:12.685 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:13.702 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DS18X20', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:14.711 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY026', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:15.714 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LM35', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:16.718 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY038', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:17.722 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY021', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:18.725 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY023', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:19.729 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY037', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:20.732 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY020', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:21.736 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY004', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:22.741 [WARNING] Bad command format or sensor unavailable: {'sensor': 'HC_SR04', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:23.748 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY010', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:24.749 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY036', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:25.753 [WARNING] Bad command format or sensor unavailable: {'sensor': 'SW420', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:26.756 [WARNING] Bad command format or sensor unavailable: {'sensor': 'GY302', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:27.760 [WARNING] Bad command format or sensor unavailable: {'sensor': 'WaterSensor', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:28.763 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY018', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:29.766 [WARNING] Bad command format or sensor unavailable: {'sensor': 'TTP223', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:30.769 [INFO ] Accept client request: {'sensor': 'HC_SR501', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:31.775 [INFO ] Accept client request: {'sensor': 'HW080', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:17:32.779 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LTR390', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:44:00.077 [WARNING] wifi@10_146_87_230 missed heartbeat (7.1s)
+2025-07-26 20:44:00.077 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-26 20:44:01.062 [WARNING] wifi@10_146_87_230 missed heartbeat (8.1s)
+2025-07-26 20:44:01.062 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-26 20:44:02.057 [WARNING] wifi@10_146_87_230 missed heartbeat (9.1s)
+2025-07-26 20:44:02.057 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-26 20:44:03.065 [WARNING] wifi@10_146_87_230 missed heartbeat (10.1s)
+2025-07-26 20:44:03.065 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-26 20:44:24.085 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:44:25.087 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:44:26.093 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:45:58.678 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY035', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:45:59.681 [WARNING] Bad command format or sensor unavailable: {'sensor': 'MPU6050', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:00.685 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DHT11', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:01.688 [WARNING] Bad command format or sensor unavailable: {'sensor': 'DS18X20', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:02.691 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY026', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:03.697 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LM35', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:04.701 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY038', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:05.702 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY021', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:06.709 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY023', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:07.710 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY037', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:08.714 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY020', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:09.722 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY004', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:10.724 [WARNING] Bad command format or sensor unavailable: {'sensor': 'HC_SR04', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:11.729 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY010', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:12.731 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY036', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:13.735 [WARNING] Bad command format or sensor unavailable: {'sensor': 'SW420', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:14.738 [WARNING] Bad command format or sensor unavailable: {'sensor': 'GY302', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:15.741 [WARNING] Bad command format or sensor unavailable: {'sensor': 'WaterSensor', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:16.744 [WARNING] Bad command format or sensor unavailable: {'sensor': 'KY018', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:17.748 [WARNING] Bad command format or sensor unavailable: {'sensor': 'TTP223', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:18.751 [INFO ] Accept client request: {'sensor': 'HC_SR501', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:19.755 [INFO ] Accept client request: {'sensor': 'HW080', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-26 20:46:20.758 [WARNING] Bad command format or sensor unavailable: {'sensor': 'LTR390', 'command': 'read_all', 'interval': 0, 'duration': 0}
+2025-07-27 00:40:05.316 [WARNING] wifi@10_146_87_230 missed heartbeat (7.2s)
+2025-07-27 00:40:05.316 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 00:40:06.313 [WARNING] wifi@10_146_87_230 missed heartbeat (8.2s)
+2025-07-27 00:40:06.313 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 00:40:07.309 [WARNING] wifi@10_146_87_230 missed heartbeat (9.2s)
+2025-07-27 00:40:07.310 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 00:40:08.307 [WARNING] wifi@10_146_87_230 missed heartbeat (10.2s)
+2025-07-27 00:40:08.307 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 08:40:26.432 [WARNING] wifi@10_146_87_230 missed heartbeat (7.0s)
+2025-07-27 08:40:26.432 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 08:40:27.437 [WARNING] wifi@10_146_87_230 missed heartbeat (8.1s)
+2025-07-27 08:40:27.437 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 08:40:28.434 [WARNING] wifi@10_146_87_230 missed heartbeat (9.1s)
+2025-07-27 08:40:28.434 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 08:40:29.433 [WARNING] wifi@10_146_87_230 missed heartbeat (10.1s)
+2025-07-27 08:40:29.433 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 09:36:50.438 [WARNING] wifi@10_146_87_230 missed heartbeat (7.5s)
+2025-07-27 09:36:50.439 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 15:28:36.687 [WARNING] wifi@10_146_87_230 missed heartbeat (7.0s)
+2025-07-27 15:28:36.687 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 15:28:37.686 [WARNING] wifi@10_146_87_230 missed heartbeat (8.0s)
+2025-07-27 15:28:37.686 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 15:28:38.686 [WARNING] wifi@10_146_87_230 missed heartbeat (9.0s)
+2025-07-27 15:28:38.686 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)
+2025-07-27 15:28:39.693 [WARNING] wifi@10_146_87_230 missed heartbeat (10.1s)
+2025-07-27 15:28:39.693 [WARNING] wifi@10_146_87_230 will be killed if missing heartbeat for 10.0s)

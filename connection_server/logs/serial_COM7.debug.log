@@ -1,0 +1,1 @@
+2025-07-26 19:27:50.233 [ERROR] Failed to open COM7@115200: SerialException("could not open port 'COM7': PermissionError(13, '拒绝访问。', None, 5)")

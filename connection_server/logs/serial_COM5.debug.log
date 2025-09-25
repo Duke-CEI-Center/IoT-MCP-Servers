@@ -1,0 +1,1 @@
+2025-07-26 19:28:15.922 [ERROR] Failed to open COM5@115200: SerialException("could not open port 'COM5': OSError(22, '信号灯超时时间已到', None, 121)")

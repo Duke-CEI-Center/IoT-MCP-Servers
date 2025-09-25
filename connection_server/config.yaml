@@ -1,0 +1,23 @@
+default_timeout: &default_timeout 10
+
+transports:
+  - type: "serial"
+    module: "transports.serial_transport"
+    class: "SerialTransport"
+    args:
+      port_names: ~
+      baudrate: 115200
+      heartbeat_interval: *default_timeout
+
+  - type: "wifi"
+    module: "transports.wifi_transport"
+    class: "WifiTransport"
+    args:
+      host: "0.0.0.0"
+      port: 9000
+      heartbeat_interval: *default_timeout
+
+monitor:
+  enabled: true
+  timeout: *default_timeout
+  interval: 1

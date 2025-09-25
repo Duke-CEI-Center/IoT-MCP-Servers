@@ -20,9 +20,9 @@ SERIAL_BAUD = 115200
 # -----------------------------------------------------------------------------
 # Globals
 # -----------------------------------------------------------------------------
-reader_tcp: asyncio.StreamReader = None
-writer_tcp: asyncio.StreamWriter = None
-ser = None
+reader_tcp: asyncio.StreamReader
+writer_tcp: asyncio.StreamWriter
+ser: serial.Serial
 
 queue_tcp: asyncio.Queue = asyncio.Queue()
 queue_serial: asyncio.Queue = asyncio.Queue()
@@ -82,10 +82,23 @@ async def serial_connection(port_name: str = None):
         ports = list(serial.tools.list_ports.comports())
         if not ports:
             raise RuntimeError("No serial ports found")
-        port_name = ports[0].device
-    print(f'[Serial] Opening {port_name}@{SERIAL_BAUD}')
-    ser = serial.Serial(port_name, SERIAL_BAUD, timeout=1)
-    event_serial_ready.set()
+        for port in ports:
+            port_name = port.device
+            try:
+                ser = serial.Serial(port_name, SERIAL_BAUD, timeout=1)
+                print(f'[Serial] Opening {port_name}@{SERIAL_BAUD}')
+                event_serial_ready.set()
+                return
+            except Exception as e:
+                print(f"[Serial] {port_name} failed to open: {e}")
+    else:
+        print(f'[Serial] Opening {port_name}@{SERIAL_BAUD}')
+        try:
+            ser = serial.Serial(port_name, SERIAL_BAUD, timeout=1)
+            event_serial_ready.set()
+            return
+        except Exception as e:
+            print(f"[Serial] {port_name} failed to open: {e}")
 
 async def reader_serial_loop():
     """Continuously read lines from serial and append to DATA_FILE_SERIAL."""
@@ -115,7 +128,7 @@ async def send_command(cmd: Dict, transport: str = 'wifi') -> None:
 
     Parameters:
     - cmd: the command dictionary to send
-    - transport: 'wifi' to use TCP, 'serial' to use serial port
+    - transport: 'Wi-Fi' to use TCP, 'serial' to use serial port
     """
     msg = json.dumps(cmd)
     if transport == 'wifi':
@@ -168,7 +181,7 @@ async def read_temperature(
     - interval: time between readings in seconds. Default 0.0 returns a single reading.
     - duration: total duration in seconds for continuous readings (0.0 => single reading;
       >0.0 => readings over duration; <0.0 => continuous until stopped).
-    - transport: 'wifi' to use TCP, 'serial' to use serial port.
+    - transport: 'Wi-Fi' to use TCP, 'serial' to use serial port.
 
     Returns:
     A list of temperature readings in degrees Celsius.
@@ -191,7 +204,7 @@ async def read_humidity(
     Parameters:
     - interval: time between readings in seconds.
     - duration: total duration in seconds for continuous readings.
-    - transport: 'wifi' or 'serial'.
+    - transport: 'Wi-Fi' or 'serial'.
 
     Returns:
     A list of humidity readings in percentage.
@@ -214,7 +227,7 @@ async def read_accel(
     Parameters:
     - interval: time between readings in seconds.
     - duration: total duration in seconds.
-    - transport: 'wifi' or 'serial'.
+    - transport: 'Wi-Fi' or 'serial'.
 
     Returns:
     A list of acceleration readings.
@@ -237,7 +250,7 @@ async def read_gyro(
     Parameters:
     - interval: time between readings.
     - duration: total duration.
-    - transport: 'wifi' or 'serial'.
+    - transport: 'Wi-Fi' or 'serial'.
 
     Returns:
     A list of gyroscope readings.
@@ -260,7 +273,7 @@ async def read_tilt(
     Parameters:
     - interval: time between readings.
     - duration: total duration.
-    - transport: 'wifi' or 'serial'.
+    - transport: 'Wi-Fi' or 'serial'.
 
     Returns:
     A list of tilt readings.
@@ -283,7 +296,7 @@ async def read_all(
     Parameters:
     - interval: time between readings.
     - duration: total duration.
-    - transport: 'wifi' or 'serial'.
+    - transport: 'Wi-Fi' or 'serial'.
 
     Returns:
     A list of dicts containing all sensor readings.
