@@ -8,6 +8,10 @@ A comprehensive Model Context Protocol (MCP) server that provides Internet of Th
 
 [DEMO_URL]
 
+https://github.com/user-attachments/assets/dc02f3e2-9957-43df-a293-3137a1357903
+
+
+
 *IoT MCP Server demonstration showing sensor data reading, device task assignment, and real-time monitoring*
 
 ## Features
